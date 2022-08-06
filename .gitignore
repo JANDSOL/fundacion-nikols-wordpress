@@ -39,10 +39,14 @@ wp-config.php
 # PHP Error Logs
 /error_log
 
+# all-in-one-wp-migration backups plugin
+/wp-content/ai1wm-backups/
+
 # All plugins
 # Note: If you wish to whitelist plugins,
 # uncomment the next line
-#/wp-content/plugins
+/wp-content/plugins/all-in-one-wp-migration/
+/wp-content/plugins/simple-css/
 
 # All themes
 # Note: If you wish to whitelist themes,

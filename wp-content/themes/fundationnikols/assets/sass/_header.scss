@@ -4,7 +4,7 @@ $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: #262626;
 $nav-font-color: #ffffff;
-$link-hover-color: #2581DC;
+$link-hover-color: #2581dc;
 
 // Outer navigation wrapper
 .navigation {
@@ -57,7 +57,7 @@ nav {
         }
         &:not(:only-child):after {
           padding-left: 4px;
-          content: ' ▾';
+          content: " ▾";
         }
       } // Dropdown list
       ul li {
@@ -72,7 +72,7 @@ nav {
 }
 
 // Dropdown list binds to JS toggle event
-.nav-dropdown {
+.sub-menu {
   position: absolute;
   display: none;
   z-index: 1;
@@ -118,7 +118,7 @@ nav {
   }
 }
 @media screen and (min-width: $breakpoint) {
-  .nav-list {
+  .menu {
     display: block !important;
   }
 }
@@ -138,7 +138,7 @@ nav {
     background: $nav-font-color;
     position: absolute;
     display: block;
-    content: '';
+    content: "";
     transition: all 300ms ease-in-out;
   }
   span:before {
@@ -167,4 +167,17 @@ article {
   max-width: $content-width;
   margin: 0 auto;
   padding: 10px;
+}
+
+// Aditional Code
+nav {
+  .menu-menu-principal-container {
+    ul {
+      li {
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

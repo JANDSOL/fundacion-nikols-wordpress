@@ -47,6 +47,7 @@ wp-config.php
 # uncomment the next line
 /wp-content/plugins/all-in-one-wp-migration/
 /wp-content/plugins/simple-css/
+/wp-content/plugins/wordpress-seo/
 
 # All themes
 # Note: If you wish to whitelist themes,

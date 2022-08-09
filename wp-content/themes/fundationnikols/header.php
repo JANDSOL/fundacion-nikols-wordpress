@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo("charset"); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundacion Nikols</title>
-  <?php wp_head() ?>
+  <?php wp_head(); ?>
 </head>
 
 <body>
@@ -14,11 +13,11 @@
   <header class="navigation">
     <div class="nav-container">
       <div class="brand">
-        <a href="#!">Logo</a>
+        <?php the_custom_logo() ?>
       </div>
       <nav>
         <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-        <ul class="nav-list">
+        <!-- <ul class="nav-list">
           <li>
             <a href="#!">Home</a>
           </li>
@@ -26,7 +25,7 @@
             <a href="#!">About</a>
           </li>
           <li>
-            <a href="#!">Services</a>
+            <a href="javascript:void(0)">Services</a>
             <ul class="nav-dropdown">
               <li>
                 <a href="#!">Web Design</a>
@@ -43,7 +42,7 @@
             <a href="#!">Pricing</a>
           </li>
           <li>
-            <a href="#!">Portfolio</a>
+            <a href="javascript:void(0)">Portfolio</a>
             <ul class="nav-dropdown">
               <li>
                 <a href="#!">Web Design</a>
@@ -59,7 +58,12 @@
           <li>
             <a href="#!">Contact</a>
           </li>
-        </ul>
+        </ul> -->
+        <?php wp_nav_menu(
+          array(
+            "menu" => 'menu-principal'
+          )
+        ); ?>
       </nav>
     </div>
   </header>

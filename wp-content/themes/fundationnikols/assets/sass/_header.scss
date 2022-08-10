@@ -1,10 +1,10 @@
 // Navigation Variables
-$content-width: 1000px;
+$content-width: 100vw;
 $breakpoint: 799px;
-$nav-height: 70px;
-$nav-background: #262626;
-$nav-font-color: #ffffff;
-$link-hover-color: #2581dc;
+$nav-height: 90px;
+$nav-background: #FDFEFF;
+$nav-font-color: #2C68AA;
+$link-hover-color: #F3F7FA;
 
 // Outer navigation wrapper
 .navigation {
@@ -14,7 +14,7 @@ $link-hover-color: #2581dc;
 
 // Logo and branding
 .brand {
-  position: absolute;
+  // position: absolute;
   padding-left: 20px;
   float: left;
   line-height: $nav-height;
@@ -29,13 +29,15 @@ $link-hover-color: #2581dc;
 
 // Container with no padding for navbar
 .nav-container {
-  max-width: $content-width;
-  margin: 0 auto;
+	max-width: $content-width;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 // Navigation
 nav {
-  float: right;
+  // float: right;
   ul {
     list-style: none;
     margin: 0;
@@ -92,6 +94,9 @@ nav {
   width: $nav-height;
 }
 @media only screen and (max-width: 798px) {
+  .brand {
+    position: absolute !important;
+  }
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
@@ -113,7 +118,7 @@ nav {
       }
     }
   }
-  .nav-dropdown {
+  .sub-menu {
     position: static;
   }
 }
@@ -162,14 +167,7 @@ nav {
   }
 }
 
-// Page content
-article {
-  max-width: $content-width;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-// Aditional Code
+// ADITIONAL CODE
 nav {
   .menu-menu-principal-container {
     ul {
@@ -180,4 +178,9 @@ nav {
       }
     }
   }
+}
+$full-height: 100vh;
+.full-background-menu {
+  height: calc(#{$full-height} - #{$nav-height});
+  background: #262626;
 }

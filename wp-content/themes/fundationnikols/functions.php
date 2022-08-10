@@ -1,7 +1,8 @@
 <?php
   function fnk_assets() {
-    wp_enqueue_style( "fundationnikols-style", get_stylesheet_directory_uri().'/assets/css/main.css' );
-    wp_enqueue_script( "fundationnikols-js",get_template_directory_uri()."/assets/js/script.js", array('jquery'));
+    wp_enqueue_style("fnk-style", get_stylesheet_directory_uri().'/assets/css/main.css');
+    wp_enqueue_script("fnk-navbar-dinamic-jquery",get_template_directory_uri()."/assets/js/script.js", array('jquery'));
+    // wp_enqueue_script('fnk-navbar-dinamic-js', get_template_directory_uri()."/assets/js/navbar_background_dinamic.js", array());
   }
   add_action('wp_enqueue_scripts', 'fnk_assets');
 

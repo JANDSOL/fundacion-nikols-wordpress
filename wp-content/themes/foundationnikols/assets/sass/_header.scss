@@ -2,26 +2,23 @@
 $content-width: 100vw;
 $breakpoint: 799px;
 $nav-height: 90px;
-$nav-background: #FDFEFF;
-$nav-font-color: #2C68AA;
-$link-hover-color: #F3F7FA;
-
-// Outer navigation wrapper
-.navigation {
-  height: $nav-height;
-  background: $nav-background;
-}
+$nav-background: #fdfeff;
+$nav-font-color: #2c68aa;
+$link-hover-color: #f3f7fa;
 
 // Logo and branding
 .brand {
-  // position: absolute;
+  display: flex;
+  align-items: center;
   padding-left: 20px;
   float: left;
   line-height: $nav-height;
   text-transform: uppercase;
   font-size: 1.4em;
+  height: inherit;
   a,
   a:visited {
+    display: flex;
     color: $nav-font-color;
     text-decoration: none;
   }
@@ -29,10 +26,17 @@ $link-hover-color: #F3F7FA;
 
 // Container with no padding for navbar
 .nav-container {
-	max-width: $content-width;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-evenly;
+  z-index: 1;
+  height: $nav-height;
+  width: $content-width;
+  max-width: $content-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  background: $nav-background;
+  box-shadow: -10px 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 6px 0px;
 }
 
 // Navigation
@@ -96,6 +100,7 @@ nav {
 @media only screen and (max-width: 798px) {
   .brand {
     position: absolute !important;
+    padding-right: 40px;
   }
   // Hamburger nav visible on mobile only
   .nav-mobile {
@@ -171,6 +176,7 @@ nav {
 nav {
   .menu-menu-principal-container {
     ul {
+      margin-left: 0 !important;
       li {
         a {
           cursor: pointer;
@@ -182,5 +188,8 @@ nav {
 $full-height: 100vh;
 .full-background-menu {
   height: calc(#{$full-height} - #{$nav-height});
-  background: #262626;
+  background: $nav-background;
+}
+header {
+  height: $nav-height;
 }
